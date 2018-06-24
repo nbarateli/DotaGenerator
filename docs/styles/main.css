@@ -16,9 +16,9 @@ body {
 
 #container {
   position: relative;
-  width: 30%;
+  width: 40%;
   top: 10%;
-  left: 35%;
+  left: 30%;
 }
 
 #min_price_lab {
