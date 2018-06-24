@@ -11,7 +11,11 @@ body {
 
 #randomizer {
   display: grid;
-  grid-template-areas: 'minlab maxlab' 'min max' 'randomize copy';
+  grid-template-areas: 'min max' 'randomize copy';
+}
+
+#randomizer > * {
+  margin: 0 10px 0 0;
 }
 
 #container {
@@ -37,10 +41,32 @@ body {
   grid-area: max;
 }
 
-#randomizer > input[submit] {
+#randomizer > input[type=submit] {
   grid-area: randomize;
+  /*width: 10%;*/
 }
 
 #randomizer > button {
   grid-area: copy;
+  /*width: 60%;*/
+  margin-right: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #FF80AA;
+}
+
+#container p {
+  display: inline-block;
+  font-size: x-large;
+}
+
+#hero-name {
+  float: left;
+  cursor: pointer;
+}
+
+#item-name {
+  float: right;
 }

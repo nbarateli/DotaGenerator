@@ -7,15 +7,21 @@
   <link rel="stylesheet" href="styles/main.css">
 </head>
 <body>
-<div id="container" align="center">
+<div id="container">
   <form id="randomizer">
-    <label for="min_price" id="min_price_lab">Min Price</label>
-    <label for="max_price" id="max_price_lab">Max Price</label>
-    <input type="number" min="0" name="minprice" id="min_price">
-    <input type="number" min="0" name="maxprice" id="max_price">
+    <label id="min_price">Min Price
+      <input type="number" min="0" name="minprice" size="6">
+    </label>
+    <label id="max_price">Max Price
+      <input type="number" min="0" name="maxprice" size="6">
+    </label>
+
+
     <input type="submit" value="Select another">
     <button>Copy to clipboard</button>
   </form>
+  <a href="#"><p id="hero-name">Hero name</p></a>
+  <p id="item-name">Item name</p>
 </div>
 </body>
 </html>
