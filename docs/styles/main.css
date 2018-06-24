@@ -1,0 +1,45 @@
+
+html {
+  height: 100%
+}
+
+body {
+  background: #41004D;
+  color: #FF80AA;
+  height: 100%;
+}
+
+#randomizer {
+  display: grid;
+  grid-template-areas: 'minlab maxlab' 'min max' 'randomize copy';
+}
+
+#container {
+  position: absolute;
+  top: 10%;
+  left: 40%;
+}
+
+#min_price_lab {
+  grid-area: minlab;
+}
+
+#max_price_lab {
+  grid-area: maxlab;
+}
+
+#min_price {
+  grid-area: min;
+}
+
+#max_price {
+  grid-area: max;
+}
+
+#randomizer > input[submit] {
+  grid-area: randomize;
+}
+
+#randomizer > button {
+  grid-area: copy;
+}
