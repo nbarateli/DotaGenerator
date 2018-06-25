@@ -1,22 +1,49 @@
-const ITEMS_URL = "http://api.steampowered.com/IEconDOTA2_570/GetGameItems/v1?key=A44F92B581E67DBC56F84C202AB1CEEA";
-const HEROES_URL = "http://api.steampowered.com/IEconDOTA2_570/GetHeroes/v1?key=A44F92B581E67DBC56F84C202AB1CEEA";
+const ITEMS_URL = "./db/items.json";
+const HEROES_URL = "./db/heroes.json";
 const ITEMS = [], HEROES = [];
 
-function ajax(url, parse) {
-    let xhttp = new XMLHttpRequest();
-    xhttp.onreadystatechange = function (e) {
-        if (e.target.readyState === 4 && e.target.status === 200) {
+function parseData(url, parse) {
+    fetch(url).then(
+        response => {
+            if (response.status !== 200) {
+                console.log('Looks like there was a problem. Status Code: ' +
+                    response.status);
+                return;
+            }
 
-            if (parse !== null) parse(e.target.responseText);
+            if (parse instanceof Function)
+                response.json().then(parse);
         }
-    };
-    console.log('oee')
-    xhttp.open("GET", url, true);
-    xhttp.send();
+    ).catch(function (err) {
+        console.log('Fetch Error :-S', err);
+    });
+}
+
+function loadItems(data) {
+    data.items.forEach(item => {
+
+        if (item.cost > 0 && item['name'].indexOf('recipe') < 0)
+            ITEMS.push(item);
+    })
+}
+
+function loadHeroes(data) {
+    data.heroes.forEach(hero => {
+        HEROES.push({name: hero.name, priority: 0.0, value: 0.0})
+    })
 }
 
 function ready() {
-    ajax(ITEMS_URL, data => console.log(JSON.parse(data)))
+    parseData(ITEMS_URL, data => {
+
+        if (data.result.status === 200) {
+            loadItems(data.result);
+        }
+    });
+    parseData(HEROES_URL, data => {
+        if (data.result.status === 200) loadHeroes(data.result);
+    });
+
 }
 
 document.addEventListener('DOMContentLoaded', ready);
