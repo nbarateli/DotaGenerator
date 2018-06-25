@@ -12,7 +12,7 @@ body {
 
 @media all and (min-width: 1100px) {
   body {
-    grid-template-areas: '. . . . .' '. . container . .';
+    grid-template-areas: '. . . . .' '. . container . .' '. . . . .';
   }
 }
 
