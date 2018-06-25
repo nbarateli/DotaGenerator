@@ -1,9 +1,11 @@
 
 html {
   height: 100%
+
 }
 
 body {
+  font-family: Calibri, serif;
   background: #41004D;
   color: #FF80AA;
   height: 100%;
@@ -21,9 +23,6 @@ body {
     grid-template-areas: '.' 'container' '.' '.';
   }
 
-  #container {
-    /*width: 90%;*/
-  }
 }
 
 #randomizer {
@@ -65,10 +64,38 @@ body {
   /*width: 10%;*/
 }
 
-#randomizer > button {
+input[type=submit], button {
+  -webkit-transition: background-color 1.5s ease-out;
+  -moz-transition: background-color 1.5s ease-out;
+  -o-transition: background-color 1.5s ease-out;
+  transition: background-color 1.5s ease-out;
+}
+
+input[type=submit]:active, button:active {
+  -webkit-transition: background-color 1.5s ease-out;
+  -moz-transition: background-color 1.5s ease-out;
+  -o-transition: background-color 1.5s ease-out;
+  transition: background-color 0.2s ease-out;
+  background-color: black !important;
+
+}
+
+#randomizer > button, input[type=submit] {
   grid-area: copy;
   /*width: 60%;*/
-  margin-right: 0;
+  /*margin-right: 0;*/
+  background-color: #C2185B;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px !important;
+  cursor: pointer;
+  height: 45px;
+
 }
 
 a {
@@ -83,9 +110,21 @@ a {
 
 #hero-name {
   float: left;
-  cursor: pointer;
+
 }
 
 #item-name {
   float: right;
+  cursor: pointer;
+}
+
+input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+#randomizer input[type="number"] {
+  padding: 9px 15px;
+  border: none;
+  background-color: #FF80AA;
+  border-radius: 10px;
 }
