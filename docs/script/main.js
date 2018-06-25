@@ -13,8 +13,11 @@ function parseData(url, parse, nextStep) {
             }
 
             if (parse instanceof Function)
-                response.json().then(parse);
-            if (nextStep instanceof Function) nextStep()
+                response.json().then(data => {
+                    parse(data);
+                    if (nextStep instanceof Function) nextStep()
+                });
+
         }
     ).catch(function (err) {
         console.log('Fetch Error :-S', err);
