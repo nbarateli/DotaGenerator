@@ -10,15 +10,19 @@ body {
   display: grid;
 }
 
-@media all and (min-width: 600px) {
+@media all and (min-width: 1100px) {
   body {
     grid-template-areas: '. . . . .' '. . container . .';
   }
 }
 
-@media all and (max-width: 600px) {
+@media all and (max-width: 1080px) {
   body {
-    grid-template-areas: 'container';
+    grid-template-areas: '.' 'container' '.' '.';
+  }
+
+  #container {
+    /*width: 90%;*/
   }
 }
 
