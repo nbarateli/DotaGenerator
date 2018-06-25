@@ -7,6 +7,19 @@ body {
   background: #41004D;
   color: #FF80AA;
   height: 100%;
+  display: grid;
+}
+
+@media all and (min-width: 600px) {
+  body {
+    grid-template-areas: '. . . . .' '. . container . .';
+  }
+}
+
+@media all and (max-width: 600px) {
+  body {
+    grid-template-areas: 'container';
+  }
 }
 
 #randomizer {
@@ -19,10 +32,11 @@ body {
 }
 
 #container {
-  position: relative;
-  width: 40%;
-  top: 10%;
-  left: 30%;
+  grid-area: container;
+  position: center;
+
+  /*top: 10%;*/
+  /*left: 30%;*/
 }
 
 #min_price_lab {
@@ -39,6 +53,7 @@ body {
 
 #max_price {
   grid-area: max;
+
 }
 
 #randomizer > input[type=submit] {
