@@ -1,11 +1,16 @@
+@input-background: #fffde7;
+@body-background: #343A3F;
+@text-color: #87ac59;
+@button-color: #5D666E;
+@transform-color: #A0A8AF;
 html {
   height: 100%;
 }
 
 body {
   font-family: Calibri, serif;
-  background: #343A3F;
-  color: #87ac59;
+  background: @body-background;
+  color: @text-color;
   height: 100%;
   display: grid;
 }
@@ -20,6 +25,7 @@ body {
   body {
     grid-template-areas: '.' 'container' '.' '.';
   }
+
 }
 
 #randomizer {
@@ -34,6 +40,7 @@ body {
 #container {
   grid-area: container;
   position: center;
+
   /*top: 10%;*/
   /*left: 30%;*/
 }
@@ -52,6 +59,7 @@ body {
 
 #max_price {
   grid-area: max;
+
 }
 
 #randomizer > input[type=submit] {
@@ -59,29 +67,27 @@ body {
   /*width: 10%;*/
 }
 
-input[type=submit],
-button {
+input[type=submit], button {
   -webkit-transition: background-color 1.5s ease-out;
   -moz-transition: background-color 1.5s ease-out;
   -o-transition: background-color 1.5s ease-out;
   transition: background-color 1.5s ease-out;
 }
 
-input[type=submit]:active,
-button:active {
+input[type=submit]:active, button:active {
   -webkit-transition: background-color 1.5s ease-out;
   -moz-transition: background-color 1.5s ease-out;
   -o-transition: background-color 1.5s ease-out;
   transition: background-color 0.3s ease-out;
-  background-color: #A0A8AF !important;
+  background-color: @transform-color !important;
+
 }
 
-#randomizer > button,
-input[type=submit] {
+#randomizer > button, input[type=submit] {
   grid-area: copy;
   /*width: 60%;*/
   /*margin-right: 0;*/
-  background-color: #5D666E;
+  background-color: @button-color;
   border: none;
   color: white;
   padding: 15px 32px;
@@ -92,11 +98,12 @@ input[type=submit] {
   margin: 4px 2px !important;
   cursor: pointer;
   height: 45px;
+
 }
 
 a {
   text-decoration: none;
-  color: #87ac59;
+  color: @text-color;
 }
 
 #container p {
@@ -106,6 +113,7 @@ a {
 
 #hero-name {
   float: left;
+
 }
 
 #item-name {
@@ -120,6 +128,6 @@ input[type=number]::-webkit-inner-spin-button {
 #randomizer input[type="number"] {
   padding: 9px 15px;
   border: none;
-  background-color: #fffde7;
+  background-color: @input-background;
   border-radius: 10px;
 }
