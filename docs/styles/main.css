@@ -6,8 +6,8 @@ html {
 
 body {
   font-family: Calibri, serif;
-  background: #41004D;
-  color: #FF80AA;
+  background: #1769aa;
+  color: #fffde7;
   height: 100%;
   display: grid;
 }
@@ -84,7 +84,7 @@ input[type=submit]:active, button:active {
   grid-area: copy;
   /*width: 60%;*/
   /*margin-right: 0;*/
-  background-color: #C2185B;
+  background-color: #2196f3;
   border: none;
   color: white;
   padding: 15px 32px;
@@ -100,7 +100,7 @@ input[type=submit]:active, button:active {
 
 a {
   text-decoration: none;
-  color: #FF80AA;
+  color: #fffde7;
 }
 
 #container p {
@@ -125,6 +125,6 @@ input[type=number]::-webkit-inner-spin-button {
 #randomizer input[type="number"] {
   padding: 9px 15px;
   border: none;
-  background-color: #FF80AA;
+  background-color: #fffde7;
   border-radius: 10px;
 }
