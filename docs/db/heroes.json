@@ -460,6 +460,10 @@
       {
         "name": "npc_dota_hero_dark_willow",
         "id": 119
+      },
+      {
+        "name": "npc_dota_hero_grimstroke",
+        "id": 120
       }
     ],
     "status": 200,
