@@ -13,4 +13,4 @@ function fetch_file($url, $filename)
 }
 
 fetch_file(ITEMS_URL, ITEMS_FILE);
-fetch_file(HEROES_URL, HEROES_FILE);
+//fetch_file(HEROES_URL, HEROES_FILE);
