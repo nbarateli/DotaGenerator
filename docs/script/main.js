@@ -45,7 +45,7 @@ const randInt = max => Math.floor(Math.random() * max);
 
 
 function chooseHero() {
-    document.getElementById('hero-name').innerText = HEROES[randInt(HEROES.length)].name.substr(14);
+    document.getElementById('hero-name').innerText = HEROES[randInt(HEROES.length)].name;
 }
 
 inRange = (cost, min, max) => min <= cost && cost <= max;
