@@ -55,7 +55,7 @@ function chooseItem(min, max) {
         item.value = inRange(item.cost, min, max) ? Math.random() : 0;
     })
     ITEMS.sort((a, b) => b.value - a.value);
-    document.getElementById('item-name').children[0].innerText = ITEMS[0].name;
+    document.getElementById('item-name').children[0].innerText = "-item " + ITEMS[0].name;
     document.getElementById('item-name').children[1].innerText = " (" + ITEMS[0].cost + ")"
 }
 
