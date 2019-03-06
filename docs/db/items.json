@@ -508,7 +508,7 @@
       {
         "id": 50,
         "name": "item_phase_boots",
-        "cost": 1550,
+        "cost": 1480,
         "secret_shop": 0,
         "side_shop": 0,
         "recipe": 0
@@ -612,7 +612,7 @@
       {
         "id": 63,
         "name": "item_power_treads",
-        "cost": 1380,
+        "cost": 1450,
         "secret_shop": 0,
         "side_shop": 0,
         "recipe": 0
@@ -748,7 +748,7 @@
       {
         "id": 80,
         "name": "item_recipe_vladmir",
-        "cost": 0,
+        "cost": 525,
         "secret_shop": 0,
         "side_shop": 0,
         "recipe": 1
@@ -804,7 +804,7 @@
       {
         "id": 269,
         "name": "item_holy_locket",
-        "cost": 2650,
+        "cost": 2700,
         "secret_shop": 0,
         "side_shop": 0,
         "recipe": 0
@@ -1300,7 +1300,7 @@
       {
         "id": 255,
         "name": "item_recipe_aeon_disk",
-        "cost": 1350,
+        "cost": 1250,
         "secret_shop": 0,
         "side_shop": 0,
         "recipe": 1
@@ -1308,7 +1308,7 @@
       {
         "id": 256,
         "name": "item_aeon_disk",
-        "cost": 3350,
+        "cost": 3250,
         "secret_shop": 0,
         "side_shop": 0,
         "recipe": 0
@@ -1388,7 +1388,7 @@
       {
         "id": 243,
         "name": "item_recipe_crimson_guard",
-        "cost": 600,
+        "cost": 750,
         "secret_shop": 0,
         "side_shop": 0,
         "recipe": 1
@@ -1396,7 +1396,7 @@
       {
         "id": 242,
         "name": "item_crimson_guard",
-        "cost": 3550,
+        "cost": 3700,
         "secret_shop": 0,
         "side_shop": 0,
         "recipe": 0
@@ -1948,7 +1948,7 @@
       {
         "id": 184,
         "name": "item_recipe_ancient_janggo",
-        "cost": 500,
+        "cost": 600,
         "secret_shop": 0,
         "side_shop": 0,
         "recipe": 1
@@ -1956,7 +1956,7 @@
       {
         "id": 185,
         "name": "item_ancient_janggo",
-        "cost": 1525,
+        "cost": 1625,
         "secret_shop": 0,
         "side_shop": 0,
         "recipe": 0
