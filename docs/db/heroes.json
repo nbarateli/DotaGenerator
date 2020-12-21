@@ -476,9 +476,13 @@
       {
         "name": "npc_dota_hero_snapfire",
         "id": 128
+      },
+      {
+        "name": "npc_dota_hero_hoodwink",
+        "id": 123
       }
     ],
     "status": 200,
-    "count": 119
+    "count": 120
   }
 }
