@@ -1,7 +1,7 @@
 const ITEMS_URL = "./db/items.json";
 const HEROES_URL = "./db/heroes.json";
 const ITEMS = [], HEROES = [];
-const DEFAULT_MIN = 2250, DEFAULT_MAX = 99999;
+const DEFAULT_MIN = 4250, DEFAULT_MAX = 99999;
 
 function parseData(url, parse, nextStep) {
     fetch(url).then(
