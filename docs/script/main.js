@@ -28,7 +28,7 @@ function parseData(url, parse, nextStep) {
 function loadItems(data) {
     data.items.forEach(item => {
 
-        if (item.cost > 0 && item['name'].indexOf('recipe') < 0) {
+        if (item['name'].indexOf('recipe') < 0) {
             ITEMS.push(item);
             ITEMS[ITEMS.length - 1].value = 0;
         }
