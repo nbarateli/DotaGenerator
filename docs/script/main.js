@@ -74,22 +74,46 @@ function randomize(e) {
     chooseHeroAndItem(form['minprice'].value, form['maxprice'].value)
 }
 
-function copy(e) {
-    e.preventDefault();
-    let color = document.getElementById('item-name').children[0];//.innerText;
+
+function copyText(text) {
+    let node = document.getElementById('text_buffer')
+    console.log(node)
+    node.innerHTML = text
     const selection = window.getSelection();
     const range = document.createRange();
-    range.selectNodeContents(color);
+    range.selectNodeContents(node);
     selection.removeAllRanges();
     selection.addRange(range);
 
     try {
         document.execCommand('copy');
         selection.removeAllRanges();
-
+        node.innerHTML = ""
     } catch (e) {
-
+        console.log(e)
     }
+}
+
+function wards(e) {
+    e.preventDefault()
+    copyText("-item item_ward_o")
+}
+
+function teleport(e) {
+    e.preventDefault()
+    copyText("-teleport")
+}
+
+function refresh(e) {
+    e.preventDefault()
+    copyText("-refresh")
+}
+
+function copy(e) {
+    e.preventDefault();
+    let text = document.getElementById('item-name').children[0].innerText;
+    console.log(text)
+    copyText(text);
 }
 
 function ready() {
@@ -104,6 +128,9 @@ function ready() {
         }, () => {
             document.getElementById('randomizer').addEventListener('submit', randomize);
             document.getElementById('copy').addEventListener('click', copy);
+            document.getElementById('wards').addEventListener('click', wards);
+            document.getElementById('teleport').addEventListener('click', teleport);
+            document.getElementById('refresh').addEventListener('click', refresh);
             document.getElementById('item-name').addEventListener('click', copy);
             chooseHeroAndItem(DEFAULT_MIN, DEFAULT_MAX);
         });

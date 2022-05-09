@@ -1,6 +1,6 @@
 @input-background: #fffde7;
 @body-background: #343A3F;
-@text-color: #87ac59;
+@text-color: #87ac55;
 @button-color: #5D666E;
 @transform-color: #A0A8AF;
 html {
@@ -30,7 +30,8 @@ body {
 
 #randomizer {
   display: grid;
-  grid-template-areas: 'min max' 'randomize copy';
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas: 'min max' 'randomize copy' 'wards teleport' '. refresh';
 }
 
 #randomizer > * {
@@ -59,7 +60,19 @@ body {
 
 #max_price {
   grid-area: max;
+}
 
+
+#wards {
+  grid-area: wards;
+}
+
+#teleport {
+  grid-area: teleport;
+}
+
+#refresh {
+  grid-area: refresh;
 }
 
 #randomizer > input[type=submit] {
@@ -83,8 +96,11 @@ input[type=submit]:active, button:active {
 
 }
 
-#randomizer > button, input[type=submit] {
+#another {
   grid-area: copy;
+}
+
+#randomizer > button, input[type=submit] {
   /*width: 60%;*/
   /*margin-right: 0;*/
   background-color: @button-color;

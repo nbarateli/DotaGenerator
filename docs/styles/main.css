@@ -1,122 +1,125 @@
 html {
   height: 100%;
 }
-
 body {
-  font-family: Calibri, serif;
-  background: #343A3F;
-  color: #87ac59;
-  height: 100%;
-  display: grid;
+    font-family: Calibri, serif;
+    background: #343A3F;
+    color: #87ac55;
+    height: 100%;
+    display: grid;
 }
-
 @media all and (min-width: 1100px) {
   body {
     grid-template-areas: '. . . . .' '. . container . .' '. . . . .';
   }
 }
-
 @media all and (max-width: 1080px) {
   body {
     grid-template-areas: '.' 'container' '.' '.';
   }
 }
-
 #randomizer {
-  display: grid;
-  grid-template-areas: 'min max' 'randomize copy';
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 'min max' 'randomize copy' 'wards teleport' '. refresh';
 }
-
 #randomizer > * {
   margin: 0 10px 0 0;
 }
-
 #container {
   grid-area: container;
   position: center;
   /*top: 10%;*/
   /*left: 30%;*/
 }
-
 #min_price_lab {
   grid-area: minlab;
 }
 
 #max_price_lab {
-  grid-area: maxlab;
+    grid-area: maxlab;
 }
 
 #min_price {
-  grid-area: min;
+    grid-area: min;
 }
 
 #max_price {
-  grid-area: max;
+    grid-area: max;
+}
+
+#wards {
+    grid-area: wards;
+}
+
+#teleport {
+    grid-area: teleport;
+}
+
+#refresh {
+    grid-area: refresh;
 }
 
 #randomizer > input[type=submit] {
-  grid-area: randomize;
-  /*width: 10%;*/
+    grid-area: randomize;
+    /*width: 10%;*/
 }
 
 input[type=submit],
 button {
-  -webkit-transition: background-color 1.5s ease-out;
-  -moz-transition: background-color 1.5s ease-out;
-  -o-transition: background-color 1.5s ease-out;
-  transition: background-color 1.5s ease-out;
+    -webkit-transition: background-color 1.5s ease-out;
+    -moz-transition: background-color 1.5s ease-out;
+    -o-transition: background-color 1.5s ease-out;
+    transition: background-color 1.5s ease-out;
 }
 
 input[type=submit]:active,
 button:active {
-  -webkit-transition: background-color 1.5s ease-out;
-  -moz-transition: background-color 1.5s ease-out;
-  -o-transition: background-color 1.5s ease-out;
-  transition: background-color 0.3s ease-out;
-  background-color: #A0A8AF !important;
+    -webkit-transition: background-color 1.5s ease-out;
+    -moz-transition: background-color 1.5s ease-out;
+    -o-transition: background-color 1.5s ease-out;
+    transition: background-color 0.3s ease-out;
+    background-color: #A0A8AF !important;
+}
+
+#another {
+    grid-area: copy;
 }
 
 #randomizer > button,
 input[type=submit] {
-  grid-area: copy;
-  /*width: 60%;*/
-  /*margin-right: 0;*/
-  background-color: #5D666E;
-  border: none;
-  color: white;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
+    /*width: 60%;*/
+    /*margin-right: 0;*/
+    background-color: #5D666E;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
   display: inline-block;
   font-size: 16px;
   margin: 4px 2px !important;
   cursor: pointer;
   height: 45px;
 }
-
 a {
-  text-decoration: none;
-  color: #87ac59;
+    text-decoration: none;
+    color: #87ac55;
 }
-
 #container p {
   display: inline-block;
   font-size: x-large;
 }
-
 #hero-name {
   float: left;
 }
-
 #item-name {
   float: right;
   cursor: pointer;
 }
-
 input[type=number]::-webkit-inner-spin-button {
   -webkit-appearance: none;
 }
-
 #randomizer input[type="number"] {
   padding: 9px 15px;
   border: none;
