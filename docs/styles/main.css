@@ -2,11 +2,11 @@ html {
   height: 100%;
 }
 body {
-    font-family: Calibri, serif;
-    background: #343A3F;
-    color: #87ac55;
-    height: 100%;
-    display: grid;
+  font-family: Calibri, serif;
+  background: #343A3F;
+  color: #87ac55;
+  height: 100%;
+  display: grid;
 }
 @media all and (min-width: 1100px) {
   body {
@@ -19,9 +19,9 @@ body {
   }
 }
 #randomizer {
-    display: grid;
-    grid-template-rows: 1fr 1fr;
-    grid-template-areas: 'min max' 'randomize copy' 'wards teleport' '. refresh';
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas: 'min max' 'randomize copy' 'wards refresh-teleport' 'vision spawnrune';
 }
 #randomizer > * {
   margin: 0 10px 0 0;
@@ -35,67 +35,75 @@ body {
 #min_price_lab {
   grid-area: minlab;
 }
-
 #max_price_lab {
-    grid-area: maxlab;
+  grid-area: maxlab;
 }
-
 #min_price {
-    grid-area: min;
+  grid-area: min;
 }
-
 #max_price {
-    grid-area: max;
+  grid-area: max;
 }
 
 #wards {
-    grid-area: wards;
+  grid-area: wards;
+}
+
+#refresh-teleport {
+  grid-area: refresh-teleport;
 }
 
 #teleport {
-    grid-area: teleport;
+  grid-area: teleport;
 }
 
 #refresh {
-    grid-area: refresh;
+  grid-area: refresh;
+}
+
+#vision {
+  grid-area: vision;
+}
+
+#spawnrune {
+  grid-area: spawnrune;
 }
 
 #randomizer > input[type=submit] {
-    grid-area: randomize;
-    /*width: 10%;*/
+  grid-area: randomize;
+  /*width: 10%;*/
 }
 
 input[type=submit],
 button {
-    -webkit-transition: background-color 1.5s ease-out;
-    -moz-transition: background-color 1.5s ease-out;
-    -o-transition: background-color 1.5s ease-out;
-    transition: background-color 1.5s ease-out;
+  -webkit-transition: background-color 1.5s ease-out;
+  -moz-transition: background-color 1.5s ease-out;
+  -o-transition: background-color 1.5s ease-out;
+  transition: background-color 1.5s ease-out;
 }
-
 input[type=submit]:active,
 button:active {
-    -webkit-transition: background-color 1.5s ease-out;
-    -moz-transition: background-color 1.5s ease-out;
-    -o-transition: background-color 1.5s ease-out;
-    transition: background-color 0.3s ease-out;
-    background-color: #A0A8AF !important;
+  -webkit-transition: background-color 1.5s ease-out;
+  -moz-transition: background-color 1.5s ease-out;
+  -o-transition: background-color 1.5s ease-out;
+  transition: background-color 0.3s ease-out;
+  background-color: #A0A8AF !important;
 }
-
 #another {
-    grid-area: copy;
+  grid-area: copy;
 }
 
 #randomizer > button,
+#refresh-teleport > button,
 input[type=submit] {
-    /*width: 60%;*/
-    /*margin-right: 0;*/
-    background-color: #5D666E;
-    border: none;
-    color: white;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
+  /*width: 60%;*/
+  /*margin-right: 0;*/
+  background-color: #5D666E;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
   display: inline-block;
   font-size: 16px;
   margin: 4px 2px !important;
@@ -103,8 +111,8 @@ input[type=submit] {
   height: 45px;
 }
 a {
-    text-decoration: none;
-    color: #87ac55;
+  text-decoration: none;
+  color: #87ac55;
 }
 #container p {
   display: inline-block;

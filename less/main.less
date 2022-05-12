@@ -31,7 +31,7 @@ body {
 #randomizer {
   display: grid;
   grid-template-rows: 1fr 1fr;
-  grid-template-areas: 'min max' 'randomize copy' 'wards teleport' '. refresh';
+  grid-template-areas: 'min max' 'randomize copy' 'wards refresh-teleport' 'vision spawnrune';
 }
 
 #randomizer > * {
@@ -67,12 +67,25 @@ body {
   grid-area: wards;
 }
 
+#refresh-teleport {
+  grid-area: refresh-teleport;
+}
+
 #teleport {
   grid-area: teleport;
 }
 
 #refresh {
   grid-area: refresh;
+}
+
+#vision {
+  grid-area: vision;
+}
+
+
+#spawnrune {
+  grid-area: spawnrune;
 }
 
 #randomizer > input[type=submit] {
@@ -100,7 +113,7 @@ input[type=submit]:active, button:active {
   grid-area: copy;
 }
 
-#randomizer > button, input[type=submit] {
+#randomizer > button, #refresh-teleport > button, input[type=submit] {
   /*width: 60%;*/
   /*margin-right: 0;*/
   background-color: @button-color;
@@ -114,7 +127,6 @@ input[type=submit]:active, button:active {
   margin: 4px 2px !important;
   cursor: pointer;
   height: 45px;
-
 }
 
 a {

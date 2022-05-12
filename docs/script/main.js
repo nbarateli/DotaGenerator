@@ -2,6 +2,8 @@ const ITEMS_URL = "./db/items.json";
 const HEROES_URL = "./db/heroes.json";
 const ITEMS = [], HEROES = [];
 const DEFAULT_MIN = 4250, DEFAULT_MAX = 99999;
+const ALL_VISION = "-allvision"
+const NORMAL_VISION = "-normalvision"
 
 function parseData(url, parse, nextStep) {
     fetch(url).then(
@@ -109,10 +111,21 @@ function refresh(e) {
     copyText("-refresh")
 }
 
+function vision(e) {
+    e.preventDefault()
+    let item = document.getElementById('vision')
+    copyText(item.innerText)
+    item.innerText = item.innerText === ALL_VISION ? NORMAL_VISION : ALL_VISION
+}
+
+function spawnRune(e) {
+    e.preventDefault()
+    copyText("-spawnrune")
+}
+
 function copy(e) {
     e.preventDefault();
     let text = document.getElementById('item-name').children[0].innerText;
-    console.log(text)
     copyText(text);
 }
 
@@ -132,6 +145,9 @@ function ready() {
             document.getElementById('teleport').addEventListener('click', teleport);
             document.getElementById('refresh').addEventListener('click', refresh);
             document.getElementById('item-name').addEventListener('click', copy);
+            document.getElementById('vision').addEventListener('click', vision);
+            document.getElementById('spawnrune').addEventListener('click', spawnRune);
+            document.getElementById('vision').innerText = ALL_VISION
             chooseHeroAndItem(DEFAULT_MIN, DEFAULT_MAX);
         });
     });
