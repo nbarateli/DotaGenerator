@@ -111,6 +111,11 @@ function refresh(e) {
     copyText("-refresh")
 }
 
+function cheats(e) {
+    e.preventDefault()
+    copyText("sv_cheats 1")
+}
+
 function vision(e) {
     e.preventDefault()
     let item = document.getElementById('vision')
@@ -144,6 +149,7 @@ function ready() {
             document.getElementById('wards').addEventListener('click', wards);
             document.getElementById('teleport').addEventListener('click', teleport);
             document.getElementById('refresh').addEventListener('click', refresh);
+            document.getElementById('cheats').addEventListener('click', cheats);
             document.getElementById('item-name').addEventListener('click', copy);
             document.getElementById('vision').addEventListener('click', vision);
             document.getElementById('spawnrune').addEventListener('click', spawnRune);
