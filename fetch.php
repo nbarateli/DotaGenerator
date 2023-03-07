@@ -1,5 +1,5 @@
 <?php
-const ITEMS_URL = "http://api.steampowered.com/IEconDOTA2_570/GetGameItems/v1?key=A44F92B581E67DBC56F84C202AB1CEEA";
+const ITEMS_URL = "http://api.steampowered.com/IEconDOTA2_205790/GetGameItems/v1?key=A44F92B581E67DBC56F84C202AB1CEEA";
 const HEROES_URL = "http://api.steampowered.com/IEconDOTA2_570/GetHeroes/v1?key=A44F92B581E67DBC56F84C202AB1CEEA";
 const ITEMS_FILE = "docs/db/items.json";
 const HEROES_FILE = "docs/db/heroes.json";

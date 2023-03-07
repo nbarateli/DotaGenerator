@@ -2236,7 +2236,7 @@
       {
         "id": 184,
         "name": "item_recipe_ancient_janggo",
-        "cost": 500,
+        "cost": 550,
         "secret_shop": 0,
         "side_shop": 0,
         "recipe": 1
@@ -2244,7 +2244,7 @@
       {
         "id": 185,
         "name": "item_ancient_janggo",
-        "cost": 1650,
+        "cost": 1700,
         "secret_shop": 0,
         "side_shop": 0,
         "recipe": 0
@@ -2260,7 +2260,7 @@
       {
         "id": 931,
         "name": "item_boots_of_bearing",
-        "cost": 4075,
+        "cost": 4125,
         "secret_shop": 0,
         "side_shop": 0,
         "recipe": 0
@@ -2348,7 +2348,7 @@
       {
         "id": 230,
         "name": "item_recipe_guardian_greaves",
-        "cost": 1450,
+        "cost": 1550,
         "secret_shop": 0,
         "side_shop": 0,
         "recipe": 1
@@ -2356,7 +2356,7 @@
       {
         "id": 231,
         "name": "item_guardian_greaves",
-        "cost": 4950,
+        "cost": 5050,
         "secret_shop": 0,
         "side_shop": 0,
         "recipe": 0
