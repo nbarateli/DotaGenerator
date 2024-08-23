@@ -28,7 +28,7 @@ function parseData(url, parse, nextStep) {
 }
 
 function loadItems(data) {
-    data.items.forEach(item => {
+    data.forEach(item => {
 
         if (item['name'].indexOf('recipe') < 0) {
             ITEMS.push(item);
@@ -57,8 +57,12 @@ function chooseItem(min, max) {
         item.value = inRange(item.cost, min, max) ? Math.random() : 0;
     })
     ITEMS.sort((a, b) => b.value - a.value);
+    document.getElementById('item-img').setAttribute("src", "")
+
     document.getElementById('item-name').children[0].innerText = "-item " + ITEMS[0].name;
     document.getElementById('item-name').children[1].innerText = " (" + ITEMS[0].cost + ")"
+    document.getElementById('item-img').setAttribute("src", ITEMS[0].img)
+    document.getElementById('item-img').setAttribute("alt", ITEMS[0].dname)
 }
 
 function chooseHeroAndItem(min, max) {
@@ -138,9 +142,8 @@ function ready() {
 
     parseData(ITEMS_URL, data => {
 
-        if (data.result.status === 200) {
-            loadItems(data.result);
-        }
+        loadItems(data)
+
     }, () => {
         parseData(HEROES_URL, data => {
             loadHeroes(data);

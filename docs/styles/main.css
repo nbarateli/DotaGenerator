@@ -44,40 +44,28 @@ body {
 #max_price {
   grid-area: max;
 }
-
 #wards {
   grid-area: wards;
 }
-
 #refresh-teleport {
   grid-area: refresh-teleport;
 }
-
 #teleport {
   grid-area: teleport;
 }
-
 #refresh {
   grid-area: refresh;
 }
-
-#cheats {
-  grid-area: cheats;
-}
-
 #vision {
   grid-area: vision;
 }
-
 #spawnrune {
   grid-area: spawnrune;
 }
-
 #randomizer > input[type=submit] {
   grid-area: randomize;
   /*width: 10%;*/
 }
-
 input[type=submit],
 button {
   -webkit-transition: background-color 1.5s ease-out;
@@ -96,7 +84,6 @@ button:active {
 #another {
   grid-area: copy;
 }
-
 #randomizer > button,
 #refresh-teleport > button,
 input[type=submit] {
@@ -125,8 +112,16 @@ a {
 #hero-name {
   float: left;
 }
-#item-name {
+
+#item-container {
   float: right;
+}
+
+#item-img {
+  float: right;
+  height: 32px;
+}
+#item-name {
   cursor: pointer;
 }
 input[type=number]::-webkit-inner-spin-button {
