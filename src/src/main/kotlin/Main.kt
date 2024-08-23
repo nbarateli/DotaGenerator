@@ -2,6 +2,7 @@ package org.example
 
 import com.google.gson.Gson
 import org.example.data.RetrofitFactory
+import java.io.File
 
 fun main() {
     val bo = RetrofitFactory.getServiceApi().getItems().execute().body()
@@ -15,5 +16,5 @@ fun main() {
     }
     val gson = Gson()
     val json = gson.toJson(items)
-    println(json)
+    File("./docs/db/items.json").writeText(json)
 }

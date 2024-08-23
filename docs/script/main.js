@@ -39,7 +39,7 @@ function loadItems(data) {
 
 function loadHeroes(data) {
     data.forEach(hero => {
-        HEROES.push({name: hero.name})
+        HEROES.push({name: hero.name, localized_name: hero.localized_name})
     })
 }
 
@@ -47,7 +47,10 @@ const randInt = max => Math.floor(Math.random() * max);
 
 
 function chooseHero() {
-    document.getElementById('hero-name').innerText = HEROES[randInt(HEROES.length)].name;
+    let hero = HEROES[randInt(HEROES.length)]
+    document.getElementById('hero-name').innerText = hero.name;
+    console.log(hero)
+    document.getElementById('hero-name').setAttribute("title", hero["localized_name"])
 }
 
 inRange = (cost, min, max) => min <= cost && cost <= max;
@@ -63,6 +66,7 @@ function chooseItem(min, max) {
     document.getElementById('item-name').children[1].innerText = " (" + ITEMS[0].cost + ")"
     document.getElementById('item-img').setAttribute("src", ITEMS[0].img)
     document.getElementById('item-img').setAttribute("alt", ITEMS[0].dname)
+    document.getElementById('item-img').setAttribute("title", ITEMS[0].dname)
 }
 
 function chooseHeroAndItem(min, max) {
