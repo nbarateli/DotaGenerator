@@ -38,7 +38,7 @@ function loadItems(data) {
 }
 
 function loadHeroes(data) {
-    data.heroes.forEach(hero => {
+    data.forEach(hero => {
         HEROES.push({name: hero.name})
     })
 }
@@ -135,6 +135,7 @@ function copy(e) {
 }
 
 function ready() {
+
     parseData(ITEMS_URL, data => {
 
         if (data.result.status === 200) {
@@ -142,7 +143,7 @@ function ready() {
         }
     }, () => {
         parseData(HEROES_URL, data => {
-            if (data.result.status === 200) loadHeroes(data.result);
+            loadHeroes(data);
         }, () => {
             document.getElementById('randomizer').addEventListener('submit', randomize);
             document.getElementById('copy').addEventListener('click', copy);
