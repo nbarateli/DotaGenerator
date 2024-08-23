@@ -39,7 +39,9 @@ function loadItems(data) {
 
 function loadHeroes(data) {
     data.forEach(hero => {
-        HEROES.push({name: hero.name, localized_name: hero.localized_name})
+        HEROES.push({
+            name: hero.name, localized_name: hero.localized_name, img: hero.img
+        })
     })
 }
 
@@ -49,8 +51,10 @@ const randInt = max => Math.floor(Math.random() * max);
 function chooseHero() {
     let hero = HEROES[randInt(HEROES.length)]
     document.getElementById('hero-name').innerText = hero.name;
-    console.log(hero)
     document.getElementById('hero-name').setAttribute("title", hero["localized_name"])
+    document.getElementById('hero-img').setAttribute("title", hero["localized_name"])
+    document.getElementById('hero-img').setAttribute('src', "")
+    document.getElementById('hero-img').setAttribute('src', 'https://cdn.cloudflare.steamstatic.com/' + hero['img'])
 }
 
 inRange = (cost, min, max) => min <= cost && cost <= max;
