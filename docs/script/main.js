@@ -50,8 +50,8 @@ const randInt = max => Math.floor(Math.random() * max);
 
 function chooseHero() {
     let hero = HEROES[randInt(HEROES.length)]
-    document.getElementById('hero-name').innerText = hero.name;
-    document.getElementById('hero-name').setAttribute("title", hero["localized_name"])
+    document.getElementById('hero-name').innerText = hero["localized_name"];
+    document.getElementById('hero-name').setAttribute("title", hero.name)
     document.getElementById('hero-img').setAttribute("title", hero["localized_name"])
     document.getElementById('hero-img').setAttribute('src', "")
     document.getElementById('hero-img').setAttribute('src', 'https://cdn.cloudflare.steamstatic.com/' + hero['img'])
