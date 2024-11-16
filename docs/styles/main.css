@@ -21,7 +21,7 @@ body {
 #randomizer {
   display: grid;
   grid-template-rows: 1fr 1fr;
-  grid-template-areas: 'min max' 'randomize copy' 'wards refresh-teleport' 'vision spawnrune';
+  grid-template-areas: 'min max' 'randomize copy' 'wards-dagon refresh-teleport' 'vision spawnrune';
 }
 #randomizer > * {
   margin: 0 10px 0 0;
@@ -44,11 +44,11 @@ body {
 #max_price {
   grid-area: max;
 }
-#wards {
-  grid-area: wards;
-}
 #refresh-teleport {
   grid-area: refresh-teleport;
+}
+#wards-dagon {
+  grid-area: wards-dagon;
 }
 #teleport {
   grid-area: teleport;
@@ -86,6 +86,7 @@ button:active {
 }
 #randomizer > button,
 #refresh-teleport > button,
+#wards-dagon > button,
 input[type=submit] {
   /*width: 60%;*/
   /*margin-right: 0;*/
@@ -120,7 +121,6 @@ a {
   height: 32px;
   margin-left: 4px;
 }
-
 #hero-img {
   float: left;
   height: 32px;

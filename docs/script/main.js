@@ -113,6 +113,12 @@ function wards(e) {
     copyText("-item item_ward_o")
 }
 
+
+function dagon(e) {
+    e.preventDefault()
+    copyText("-item item_dagon 5")
+}
+
 function teleport(e) {
     e.preventDefault()
     copyText("-teleport")
@@ -159,6 +165,7 @@ function ready() {
             document.getElementById('randomizer').addEventListener('submit', randomize);
             document.getElementById('copy').addEventListener('click', copy);
             document.getElementById('wards').addEventListener('click', wards);
+            document.getElementById('dagon').addEventListener('click', dagon);
             document.getElementById('teleport').addEventListener('click', teleport);
             document.getElementById('refresh').addEventListener('click', refresh);
             document.getElementById('cheats').addEventListener('click', cheats);
