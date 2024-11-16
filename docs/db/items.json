@@ -1459,13 +1459,13 @@
   },
   {
     "name": "item_recipe_gungir",
-    "cost": 250,
+    "cost": 550,
     "img": "https://cdn.cloudflare.steamstatic.com//apps/dota2/images/dota_react/items/recipe.png?t\u003d1593393829403",
     "dname": "Gleipnir Recipe"
   },
   {
     "name": "item_gungir",
-    "cost": 5450,
+    "cost": 5750,
     "img": "https://cdn.cloudflare.steamstatic.com//apps/dota2/images/dota_react/items/gungir.png?t\u003d1593393829403",
     "dname": "Gleipnir"
   },
@@ -1543,13 +1543,13 @@
   },
   {
     "name": "item_recipe_arcane_boots",
-    "cost": 375,
+    "cost": 475,
     "img": "https://cdn.cloudflare.steamstatic.com//apps/dota2/images/dota_react/items/recipe.png?t\u003d1593393829403",
     "dname": "Arcane Boots Recipe"
   },
   {
     "name": "item_arcane_boots",
-    "cost": 1300,
+    "cost": 1400,
     "img": "https://cdn.cloudflare.steamstatic.com//apps/dota2/images/dota_react/items/arcane_boots.png?t\u003d1593393829403",
     "dname": "Arcane Boots"
   },
@@ -1711,7 +1711,7 @@
   },
   {
     "name": "item_guardian_greaves",
-    "cost": 4950,
+    "cost": 5050,
     "img": "https://cdn.cloudflare.steamstatic.com//apps/dota2/images/dota_react/items/guardian_greaves.png?t\u003d1593393829403",
     "dname": "Guardian Greaves"
   },
